@@ -1,0 +1,640 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background-color: #eff7ee;
+}
+
+.content_wrapper{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    max-width: 100%;
+    /* background-color: red; */
+    margin: 40px;
+    /* border: 2px solid black; */
+    padding: 10px;
+}
+.balance_wrapper{
+    /* display: flex; */
+    /* justify-content: flex-start; */
+    /* border: 2px solid green; */
+    border-radius: 8px;
+    padding: 20px;
+    background-color:  #968ecd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.balance_container h2{
+    font-size: 16px;
+    align-items: center;
+    color: #4B5563;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+}
+.container h1{
+    color: green;
+    font-size: 15px;
+}
+.container img{
+    height: 20px;
+    width: 20px;
+}
+.content_table{
+    border-collapse: collapse;
+    margin: 25px 20px;
+    font-size: 20px;
+    width: 98%;
+    min-width: 300px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    table-layout: fixed;
+    background-color: #FFFFFF;
+    border: 1px solid #E5E7EB;
+}
+
+.content_table thead tr{
+    text-align: left;
+    font-weight: 600;
+    color: #374151;
+    font-size: 16px;
+    background-color: #F9FAFB;
+    border-bottom: 2px solid #E5E7EB;
+}
+
+.content_table th, .content_table td{
+    padding: 18px 20px;
+    word-wrap: break-word;
+    white-space: normal;
+    border-bottom: 1px solid #F3F4F6;
+}
+
+.content_table th {
+    font-weight: 600;
+    color: #374151;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 14px;
+}
+
+.content_table tbody tr{
+    border-bottom: 1px solid #F3F4F6;
+    font-size: 16px;
+    white-space: nowrap;
+    transition: background-color 0.2s ease;
+}
+
+.content_table tbody tr:hover {
+    background-color: #F9FAFB;
+}
+
+.content_table tbody tr:last-of-type{
+    border-bottom: none;
+}
+
+.content_table tbody tr:nth-child(even) {
+    background-color: #FAFAFA;
+}
+
+.content_table tbody tr:nth-child(even):hover {
+    background-color: #F3F4F6;
+}
+
+.transaction_box{
+    /* border: 1px solid #2563EB; */
+    border-radius: 12px;
+    background-color: #FFFFFF;
+    margin: 10px 10px;
+}
+
+.transaction_box h1{
+   margin-left: 20px;
+   margin-top: 20px;
+   font-size: 20px;
+   color: #111827;
+}
+.table_scroll{
+    max-height: 300px; /* Adjust height as needed */
+    overflow-y: auto;
+    overflow-x: hidden;
+    /* border: 1px solid #ccc; */
+}
+
+.loan_container {
+    display: flex;
+    max-width: 100%;
+    gap: 50px;
+    /* width: 100%; */
+    padding: 20px;
+    /* border: 2px solid blue; Container border (optional) */
+    box-sizing: border-box;
+}
+
+.current_loan {
+    flex: 0 0 756px;
+    min-height: 200px;
+    /* border: 2px solid orange;       Border thickness and style */
+    /* border-color: #F97316;          Tailwind-style orange */
+    background-color: #FFFFFF;
+    border-radius: 12px;      /* Optional: soft orange background */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    filter: blur(2px);
+}
+
+.loan_summary {
+    flex: 0 0 756px;
+    min-height: 200px;
+    /* border: 2px solid pink; */
+    /* border-color: #EC4899;          Tailwind-style pink */
+    background-color: #FFFFFF;
+    border-radius: 12px;      /* Optional: soft pink background */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    filter: blur(2px);
+}
+.progress-container {
+  width: 500px;
+  height: 5px;
+  background-color: #eee;
+  margin-bottom: 18px;
+  /* margin-top: 10px; */
+  margin-left: 25px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: #2563EB; /* Green */
+  width: 0%; /* Set dynamically */
+  transition: width 0.3s ease;
+}
+.loan_container h2{
+    color: #111827;
+    font-size: 20px;
+    margin-bottom: 5px;
+    margin-left: 3%;
+    margin-top: 10px;
+}
+
+.loan_container h3 {
+    color: #6B7280;
+    font-size: 15px;
+    margin-left: 3%;
+    margin-bottom: 10px;
+}
+.loan_container h1{
+    color: #6B7280;
+    font-size: 15px;
+    margin-left: 3%;
+    margin-bottom: 3px;
+}
+
+/* Responsive Design for All Components */
+
+/* Large screens - Desktop */
+@media (max-width: 1200px) {
+    .content_wrapper {
+        margin: 30px;
+        padding: 8px;
+        margin-top: 20px; /* Normal margin for desktop */
+    }
+    
+    .loan_container {
+        gap: 30px;
+        padding: 15px;
+    }
+    
+    .current_loan,
+    .loan_summary {
+        flex: 0 0 calc(50% - 15px);
+        min-width: 300px;
+    }
+    
+    .progress-container {
+        width: 400px;
+    }
+}
+
+/* Medium screens - Tablets */
+@media (max-width: 900px) {
+    .content_wrapper {
+        margin: 20px;
+        padding: 5px;
+        margin-top: 90px; /* Add top margin for tablet devices */
+    }
+    
+    .balance_wrapper {
+        padding: 15px;
+    }
+    
+    .balance_container h2 {
+        font-size: 14px;
+    }
+    
+    .balance_container h1 {
+        font-size: 24px;
+    }
+    
+    .container h1 {
+        font-size: 14px;
+    }
+    
+    .transaction_box h1 {
+        font-size: 18px;
+        margin-left: 15px;
+    }
+    
+    .content_table {
+        font-size: 16px;
+        margin: 20px 15px;
+        width: 95%;
+    }
+    
+    .content_table th, 
+    .content_table td {
+        padding: 15px 10px;
+        font-size: 14px;
+    }
+    
+    .content_table thead tr {
+        font-size: 14px;
+    }
+    
+    .content_table tbody tr {
+        font-size: 13px;
+    }
+    
+    .loan_container {
+        flex-direction: column;
+        gap: 20px;
+        padding: 15px;
+    }
+    
+    .current_loan,
+    .loan_summary {
+        flex: 1;
+        min-width: auto;
+        width: 100%;
+    }
+    
+    .progress-container {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+/* Small screens - Mobile */
+@media (max-width: 650px) {
+    .content_wrapper {
+        margin: 10px;
+        padding: 5px;
+        margin-top: 100px; /* Add top margin to account for fixed navigation */
+    }
+    
+    .balance_wrapper {
+        padding: 12px;
+        border-radius: 6px;
+    }
+    
+    .balance_container h2 {
+        font-size: 13px;
+    }
+    
+    .balance_container h1 {
+        font-size: 20px;
+    }
+    
+    .container h1 {
+        font-size: 13px;
+    }
+    
+    .container img {
+        height: 18px;
+        width: 18px;
+    }
+    
+    .transaction_box {
+        margin: 8px 5px;
+        border-radius: 8px;
+    }
+    
+    .transaction_box h1 {
+        font-size: 16px;
+        margin-left: 12px;
+        margin-top: 15px;
+    }
+    
+    .content_table {
+        font-size: 14px;
+        margin: 15px 10px;
+        width: 95%;
+        min-width: auto;
+    }
+    
+    .content_table th, 
+    .content_table td {
+        padding: 12px 8px;
+        font-size: 14px;
+    }
+    
+    .content_table thead tr {
+        font-size: 14px;
+    }
+    
+    .content_table tbody tr {
+        font-size: 13px;
+    }
+    
+    /* Fixed height table with vertical scroll - Show exactly 6 rows */
+    .table_scroll {
+        height: calc(6 * (12px + 14px + 12px) + 16px + 3px); /* Fixed height for exactly 6 rows */
+        overflow: hidden; /* Hide container scroll */
+        border-radius: 8px;
+        border: 1px solid #E5E7EB; /* Professional border */
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    }
+    
+    /* Keep table responsive but within container */
+    .content_table {
+        width: 100%;
+        min-width: auto;
+        table-layout: auto; /* Allow natural column sizing */
+        margin: 0; /* Remove table margins */
+        height: 100%; /* Take full height of container */
+        border: none;
+        box-shadow: none;
+    }
+    
+    /* Make thead sticky and tbody scrollable */
+    .content_table thead {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        background-color: #F9FAFB;
+    }
+    
+    .content_table tbody {
+        display: block;
+        height: calc(6 * (12px + 14px + 12px)); /* Height for exactly 6 rows */
+        overflow-y: auto; /* Scroll only the tbody */
+        overflow-x: hidden;
+    }
+    
+    .content_table thead tr {
+        display: table;
+        width: 100%;
+        table-layout: auto;
+        background-color: #F9FAFB;
+    }
+    
+    .content_table tbody tr {
+        display: table;
+        width: 100%;
+        table-layout: auto;
+        border: none;
+        margin-bottom: 0;
+        border-radius: 0;
+        background-color: transparent;
+        border-bottom: 1px solid #F3F4F6;
+    }
+    
+    .content_table tbody tr:nth-child(even) {
+        background-color: #FAFAFA;
+    }
+    
+    .content_table tbody tr:hover {
+        background-color: #F9FAFB;
+    }
+    
+    .content_table th,
+    .content_table td {
+        white-space: normal; /* Allow text wrapping */
+        word-wrap: break-word;
+        min-width: auto; /* Remove fixed minimum width */
+        border-bottom: 1px solid #F3F4F6;
+    }
+    
+    .content_table th {
+        background-color: #F9FAFB;
+        font-weight: 600;
+        color: #374151;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        font-size: 14px;
+    }
+    
+    .content_table td {
+        border: none;
+        position: static;
+        padding: 12px 8px;
+        text-align: left;
+        font-size: 14px;
+        white-space: normal;
+        word-wrap: break-word;
+        color: #374151;
+    }
+    
+    .content_table td:before {
+        display: none; /* Hide the pseudo-element labels */
+    }
+    
+    .loan_container {
+        padding: 10px;
+        gap: 15px;
+    }
+    
+    .current_loan,
+    .loan_summary {
+        padding: 15px;
+        min-height: 150px;
+    }
+    
+    .loan_container h2 {
+        font-size: 18px;
+        margin-left: 2%;
+    }
+    
+    .loan_container h3 {
+        font-size: 14px;
+        margin-left: 2%;
+    }
+    
+    .loan_container h1 {
+        font-size: 14px;
+        margin-left: 2%;
+    }
+    
+    .progress-container {
+        width: 90%;
+        margin-left: 2%;
+    }
+}
+
+/* Extra small screens - Small mobile */
+@media (max-width: 480px) {
+    .content_wrapper {
+        margin: 5px;
+        padding: 2px;
+        margin-top: 90px; /* Slightly less margin for smaller screens */
+    }
+    
+    .balance_wrapper {
+        padding: 10px;
+    }
+    
+    .balance_container h2 {
+        font-size: 12px;
+    }
+    
+    .balance_container h1 {
+        font-size: 18px;
+    }
+    
+    .container h1 {
+        font-size: 12px;
+    }
+    
+    .container img {
+        height: 16px;
+        width: 16px;
+    }
+    
+    .transaction_box h1 {
+        font-size: 14px;
+        margin-left: 10px;
+        margin-top: 12px;
+    }
+    
+    .content_table {
+        margin: 10px 5px;
+        width: 98%;
+    }
+    
+    /* For very small screens, use vertical cards */
+    .content_table,
+    .content_table thead,
+    .content_table tbody,
+    .content_table th,
+    .content_table td,
+    .content_table tr {
+        display: block;
+    }
+    
+    .content_table thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+    
+    .content_table tr {
+        border: 1px solid #E5E7EB;
+        margin-bottom: 10px;
+        border-radius: 8px;
+        background-color: #FFFFFF;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+    
+    .content_table td {
+        border: none;
+        position: relative;
+        padding: 10px 12px 10px 45%;
+        text-align: left;
+        font-size: 13px;
+        white-space: normal;
+        word-wrap: break-word;
+        color: #374151;
+    }
+    
+    .content_table td:before {
+        content: attr(data-label);
+        position: absolute;
+        left: 15px;
+        width: 40%;
+        padding-right: 10px;
+        white-space: nowrap;
+        font-weight: 600;
+        color: #374151;
+        font-size: 12px;
+        display: block;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+    
+    .table_scroll {
+        max-height: none;
+        overflow: visible;
+        border: none;
+        box-shadow: none;
+    }
+    
+    .loan_container {
+        padding: 8px;
+        gap: 12px;
+    }
+    
+    .current_loan,
+    .loan_summary {
+        padding: 12px;
+        min-height: 120px;
+    }
+    
+    .loan_container h2 {
+        font-size: 16px;
+        margin-left: 1%;
+    }
+    
+    .loan_container h3 {
+        font-size: 13px;
+        margin-left: 1%;
+    }
+    
+    .loan_container h1 {
+        font-size: 13px;
+        margin-left: 1%;
+    }
+    
+    .progress-container {
+        width: 95%;
+        margin-left: 1%;
+    }
+}
+
+/* Landscape mobile devices */
+@media (max-width: 650px) and (orientation: landscape) {
+    .content_wrapper {
+        margin: 8px;
+        padding: 3px;
+        margin-top: 80px; /* Less margin for landscape orientation */
+    }
+    
+    .table_scroll {
+        height: calc(4 * (12px + 14px + 12px) + 16px + 3px); /* Show 4 rows in landscape */
+    }
+    
+    .content_table tbody {
+        height: calc(4 * (12px + 14px + 12px)); /* Height for 4 rows */
+    }
+}
+
+/* Large mobile devices */
+@media (min-width: 481px) and (max-width: 650px) {
+    .content_table th, 
+    .content_table td {
+        padding: 14px 10px;
+        font-size: 15px;
+    }
+    
+    .table_scroll {
+        height: calc(5 * (12px + 15px + 12px) + 16px + 3px); /* Show 5 rows on larger mobile */
+    }
+    
+    .content_table tbody {
+        height: calc(5 * (12px + 15px + 12px)); /* Height for 5 rows */
+    }
+}
