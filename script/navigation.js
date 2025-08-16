@@ -7,23 +7,44 @@ hamburger.addEventListener('click', () => {
         navLinks.classList.add('active');
         hamburger.classList.add('active');
         document.body.classList.add('menu-open');
-        menuOpen = true; 
+        menuOpen = true;
+        
+        // Add entrance animation for each nav item
+        const navItems = document.querySelectorAll('.nav-links li');
+        navItems.forEach((item, index) => {
+            item.style.transitionDelay = `${0.1 * (index + 1)}s`;
+        });
     }
     else if (menuOpen == true) {
         navLinks.classList.remove('active');
         hamburger.classList.remove('active');
         document.body.classList.remove('menu-open');
         menuOpen = false;
+        
+        // Reset transition delays
+        const navItems = document.querySelectorAll('.nav-links li');
+        navItems.forEach(item => {
+            item.style.transitionDelay = '0s';
+        });
     }
 });
 
 // Close menu when clicking on a link
 document.querySelectorAll('.nav-links a').forEach(link => {
     link.addEventListener('click', () => {
-        navLinks.classList.remove('active');
-        hamburger.classList.remove('active');
-        document.body.classList.remove('menu-open');
-        menuOpen = false;
+        // Add a small delay to show the click effect before closing
+        setTimeout(() => {
+            navLinks.classList.remove('active');
+            hamburger.classList.remove('active');
+            document.body.classList.remove('menu-open');
+            menuOpen = false;
+            
+            // Reset transition delays
+            const navItems = document.querySelectorAll('.nav-links li');
+            navItems.forEach(item => {
+                item.style.transitionDelay = '0s';
+            });
+        }, 150);
     });
 });
 
@@ -37,5 +58,27 @@ document.addEventListener('click', (e) => {
         hamburger.classList.remove('active');
         document.body.classList.remove('menu-open');
         menuOpen = false;
+        
+        // Reset transition delays
+        const navItems = document.querySelectorAll('.nav-links li');
+        navItems.forEach(item => {
+            item.style.transitionDelay = '0s';
+        });
+    }
+});
+
+// Close menu on escape key
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && menuOpen) {
+        navLinks.classList.remove('active');
+        hamburger.classList.remove('active');
+        document.body.classList.remove('menu-open');
+        menuOpen = false;
+        
+        // Reset transition delays
+        const navItems = document.querySelectorAll('.nav-links li');
+        navItems.forEach(item => {
+            item.style.transitionDelay = '0s';
+        });
     }
 });

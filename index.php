@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ipayaman</title>
-   <link rel="stylesheet" href="/moblowagan_webapp/css/header.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="/moblowagan_webapp/css/header.css?v=<?php echo time(); ?>">
     <link rel="stylesheet" href="css/login.css?v=<?php echo time(); ?>">
     <link rel="stylesheet" href="css/head.css?v=<?php echo time(); ?>">
     <link rel="preconnect" href="https://fonts.googleapis.com">

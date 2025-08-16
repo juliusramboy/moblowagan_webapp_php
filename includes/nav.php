@@ -10,11 +10,11 @@
     <div class="bar"></div>
   </div>
   <ul class="nav-links">
-    <li><a href="/moblowagan_webapp/index.php">Home</a></li>
-    <li><a href="/moblowagan_webapp/pages/dashboard.php">Dashboard</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#profile">Profile</a></li>
-    <li><a class="nav-cta-button" href="/moblowagan_webapp/includes/logout.php">Log out</a></li>  
+    <li style="--i: 1;"><a href="/moblowagan_webapp/index.php">Home</a></li>
+    <li style="--i: 2;"><a href="/moblowagan_webapp/pages/dashboard.php">Dashboard</a></li>
+    <li style="--i: 3;"><a href="#about">About</a></li>
+    <li style="--i: 4;"><a href="#profile">Profile</a></li>
+    <li style="--i: 5;"><a class="nav-cta-button" href="/moblowagan_webapp/includes/logout.php">Log out</a></li>  
   </ul>
 </nav>
 <script src="/moblowagan_webapp/script/navigation.js"></script>
