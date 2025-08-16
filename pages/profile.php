@@ -19,7 +19,7 @@
         <div class="box-holder">
             <div class="profile-card">
                 <div class="image">
-                    <img class="pfp" src="" alt="">
+                    <img class="pfp" src="../images/avatar.png" alt="">
                     <h1 class="txt">Change Photo</h1>
                 </div>
                 <div class="verified-box">

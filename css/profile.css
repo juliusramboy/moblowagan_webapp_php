@@ -34,7 +34,9 @@ body{
 }
 
 .profile-card{
-    border: solid 2px blue;
+    background: whitesmoke;
+    border: solid 2px #968ecd;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     width: 384px;
     height: 510px;
     margin-top: 0;
@@ -42,7 +44,9 @@ body{
 }
 
 .profile-info{
-    border: solid 2px black;
+    background: whitesmoke;
+    border: solid 2px #968ecd;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     width: 800px;
     height: 723px;
     border-radius: 12px;
@@ -62,9 +66,9 @@ body{
     width: 150px;               /* make it bigger */
     height: 150px;              /* same as width */
     border-radius: 50%;        /* makes it circle */
-    border: 2px solid green;   /* border around it */
+    border: 2px solid #968ecd;   /* border around it */
     object-fit: cover;         /* crop img nicely inside */
-    background-color: gray;    /* gray if no img */
+    background-color: whitesmoke;    /* gray if no img */
     display: block;            /* ensure no extra gaps */
 
 }
