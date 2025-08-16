@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background-color: #eff7ee;
+}
+
+.wrapper {
+    /* border: solid 2px red; */
+    margin: 20px;
+    margin-left: 15%;
+    
+}
+
+.title {
+    font-size: 28px;
+}
+
+.subtitle{
+    font-size: 16px;
+    margin-bottom: 2%;
+}
+
+.box-holder{
+    /* border: solid 2px green; */
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;;
+    gap: 5rem;
+
+}
+
+.profile-card{
+    border: solid 2px blue;
+    width: 384px;
+    height: 510px;
+    margin-top: 0;
+    border-radius: 12px;
+}
+
+.profile-info{
+    border: solid 2px black;
+    width: 800px;
+    height: 723px;
+    border-radius: 12px;
+}
+
+.image{
+    /* border: solid 2px red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.pfp{
+    width: 150px;               /* make it bigger */
+    height: 150px;              /* same as width */
+    border-radius: 50%;        /* makes it circle */
+    border: 2px solid green;   /* border around it */
+    object-fit: cover;         /* crop img nicely inside */
+    background-color: gray;    /* gray if no img */
+    display: block;            /* ensure no extra gaps */
+
+}
+
+.txt{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.verified-box{
+    border: solid 2px black;
+    margin: 10px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #2e602a, #9c49a7);
+    color: white;
+    padding: 10px;
+}
+
+.verified{
+    display: flex;
+    margin-bottom: 5px;
+    gap: .5rem;
+}
+
+.verified-box h2{
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.links{
+    /* border: solid 2px red; */
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.link-btn {
+  background: none;
+  border: none;
+  font: inherit;
+  color: inherit;
+  padding: 0;
+  cursor: pointer;
+  text-align: left;
+}
+
+.link-btn:hover {
+  text-decoration: underline;
+}
+
+
+.clickable:first-child {
+  margin-top: 1rem;
+}
+
+.clickable{
+    display: flex;
+    margin-bottom: 2rem;
+    gap: .8rem;
+}
+
+.clickable:last-child {
+  margin-bottom: 0;
+}
+
+.link-txt{
+    font-size: 16px;
+}

@@ -10,10 +10,9 @@
     <div class="bar"></div>
   </div>
   <ul class="nav-links">
-    <li style="--i: 1;"><a href="/moblowagan_webapp/index.php">Home</a></li>
-    <li style="--i: 2;"><a href="/moblowagan_webapp/pages/dashboard.php">Dashboard</a></li>
-    <li style="--i: 3;"><a href="#about">About</a></li>
-    <li style="--i: 4;"><a href="#profile">Profile</a></li>
+    <li style="--i: 1;"><a href="/moblowagan_webapp/pages/dashboard.php">Home</a></li>
+    <li style="--i: 2;"><a href="/moblowagan_webapp/pages/under_development_page.php">Loan</a></li>
+    <li style="--i: 4;"><a href="/moblowagan_webapp/pages/profile.php">Profile</a></li>
     <li style="--i: 5;"><a class="nav-cta-button" href="/moblowagan_webapp/includes/logout.php">Log out</a></li>  
   </ul>
 </nav>
