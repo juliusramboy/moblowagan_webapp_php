@@ -20,7 +20,7 @@
             <div class="profile-card">
                 <div class="image">
                     <img class="pfp" src="../images/avatar.png" alt="">
-                    <h1 class="txt">Change Photo</h1>
+                    <button class="txt" onclick="openPopup('notification')">Change Photo</button>
                 </div>
                 <div class="verified-box">
                     <div class="verified">
@@ -47,6 +47,65 @@
 
             </div>
             <div class="profile-info">
+                <h1 class="prof_header">Personal Information</h1>
+
+                <div class="info_box">
+                    <div class="card_info">
+                        <h1>Full Name</h1>
+                        <h2>Sameple Name</h2>
+                    </div>
+
+                    <div class="card_info">
+                        <h1>Phone Number</h1>
+                        <h2>Sameple Number</h2>
+                    </div>
+
+                    <div class="card_info">
+                        <h1>Address</h1>
+                        <h2>Sameple address</h2>
+                    </div>
+
+                    <div class="card_info">
+                        <h1>Country</h1>
+                        <h2>Sameple Country</h2>
+                    </div>
+
+                    <div class="card_info">
+                        <h1>Email Address</h1>
+                        <h2>Sameple Email Address</h2>
+                    </div>
+
+                    <div class="card_info">
+                        <h1>Date Created Account</h1>
+                        <h2>Sameple Name</h2>
+                    </div>
+
+                    <div class="card_info">
+                        <h1>Language</h1>
+                        <h2>Sameple Name</h2>
+                    </div>
+
+                    <div class="card_info">
+                        <h1>Last Login</h1>
+                        <h2>Sameple Name</h2>
+                    </div>
+                </div>
+
+                <div class="info_box_second">
+                <h1 class="prof_header_second">Security Status</h1>
+
+                    <div class="box">
+                        <div class="card_info_second">
+                            <h1>Language</h1>
+                            <h2>Sameple Name</h2>
+                        </div>
+
+                        <div class="card_info_second">
+                            <h1>Last Login</h1>
+                            <h2>Sameple Name</h2>
+                        </div>
+                    </div>
+                </div>
             </div>
 
         </div>

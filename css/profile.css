@@ -76,6 +76,16 @@ body{
 .txt{
     font-size: 16px;
     font-weight: 600;
+    background: none;
+    border: none;
+    font: inherit;
+    color: inherit;
+    padding: 0;
+    cursor: pointer;    
+}
+
+.txt:hover {
+  text-decoration: underline;
 }
 
 .verified-box{
@@ -137,3 +147,96 @@ body{
 .link-txt{
     font-size: 16px;
 }
+
+/* profile card */
+
+.prof_header{
+    font-size: 25px;
+    margin: 3% 5% 1%;
+    /* border: solid 2px #9c49a7; */
+}
+
+.info_box{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
+    /* border: solid 2px red; */
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    border-bottom: solid 2px black;
+    width: 95%;          /* make it narrower */
+    margin: 0 auto; 
+}
+
+.card_info{
+    background: #a8a1da;
+    margin: 3% 5% 3%;
+    padding: 4.5%;
+    border-radius: 5px;
+}
+
+.card_info h1 {
+    font-size: 16px;
+    font-weight: 600; /* Bold for h1 */
+}
+
+.card_info h2 {
+    font-size: 16px;
+    font-weight: 500; /* Medium for h2 */
+}
+
+.box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    gap: 1rem;
+    /* border: solid 2px red; */
+    width: 95%;          
+    margin: 0 auto;
+}
+
+.prof_header_second{
+    margin-top: 2%;
+    font-size: 25px;
+    margin-left: 5%;
+}
+
+.card_info_second{
+    background: #a8a1da;
+    margin: 3% 5% 3%;
+    padding: 4.5%;
+    border-radius: 5px;
+}
+
+.card_info_second h1 {
+    font-size: 16px;
+    font-weight: 600; /* Bold for h1 */
+}
+
+.card_info_second h2 {
+    font-size: 16px;
+    font-weight: 500; /* Medium for h2 */
+}
+
+
+/* Extra Small Devices (Phones) */
+@media (max-width: 479px) {
+   .box-holder{
+    display: flex;
+    flex-direction: column;
+   }
+}
+
+/* Small Devices (Large Phones) */
+@media (min-width: 480px) and (max-width: 767px) {}
+
+/* Medium Devices (Tablets) */
+@media (min-width: 768px) and (max-width: 991px) {}
+
+/* Large Devices (Desktops) */
+@media (min-width: 992px) and (max-width: 1199px) {}
+
+/* Extra Large Devices (Wide Screens) */
+@media (min-width: 1200px) and (max-width: 1599px) {}
+
+/* XXL / Ultra Wide Screens */
+@media (min-width: 1600px) {}
