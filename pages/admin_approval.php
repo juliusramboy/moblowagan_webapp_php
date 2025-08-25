@@ -1,17 +1,6 @@
 <?php
-    session_start();
-    require_once "../includes/dbh.inc.php";
-
-    $userId = $_SESSION['user_id'];
-    //echo "Session ID: " . $userId;
-
-    $userStmt = $pdo->prepare("SELECT username FROM users WHERE id = ?");
-    $userStmt->execute([$userId]);
-    $user = $userStmt->fetch();
-
-    $userStmt2 = $pdo->prepare("SELECT created_at FROM credentials WHERE user_id = ?");
-    $userStmt2->execute([$userId]);
-    $created_at = $userStmt2->fetch();
+    require_once "../includes/init.php";
+    require_once "../includes/admin_approval.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -65,7 +54,7 @@
              </div>
             <div class="message-box">
                 <h1>Application ID</h1>
-                <h2>#PTG-<?php echo"$userId" ?></h2>
+                <h2>#PTG-<?php echo"$user_id" ?></h2>
             </div>
             <div class="message-box">
                 <h1>Estimated Review Time</h1>

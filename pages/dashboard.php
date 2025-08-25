@@ -1,3 +1,9 @@
+<?php
+    require_once "../includes/init.php";
+    require_once "../includes/fetch_user_balance.php";
+    require_once "../includes/fetch_recent_transaction.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,8 +25,9 @@
     <div class="balance_wrapper">
         <div class="balance_container">
             <h2>Balance</h2>
-            <h1>₱ 15,000.00<?php ?></h1>
+            <h1> ₱ <?php echo $balance['user_balance']; ?></h1>
         </div>
+
         <div class="balance_stats">
             <div class="container">
                 <img src="../images/arrow up.png" alt="">
@@ -41,68 +48,17 @@
                     <th>Status</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <td data-label="Date">10/2/25</td>
-                    <td data-label="Description">bayad sa paluwagan</td>
-                    <td data-label="Amount">250.00</td>
-                    <td data-label="Status">completed</td>
-                </tr>
-                <tr>
-                    <td data-label="Date">10/2/25</td>
-                    <td data-label="Description">bayad sa paluwagan</td>
-                    <td data-label="Amount">250.00</td>
-                    <td data-label="Status">completed</td>
-                </tr>
-                <tr>
-                    <td data-label="Date">10/2/25</td>
-                    <td data-label="Description">bayad sa paluwagan</td>
-                    <td data-label="Amount">250.00</td>
-                    <td data-label="Status">completed</td>
-                </tr>
-                <tr>
-                    <td data-label="Date">10/2/25</td>
-                    <td data-label="Description">bayad sa paluwagan</td>
-                    <td data-label="Amount">250.00</td>
-                    <td data-label="Status">completed</td>
-                </tr>
-                <tr>
-                    <td data-label="Date">10/2/25</td>
-                    <td data-label="Description">bayad sa paluwaganasddddddddddddasdasd</td>
-                    <td data-label="Amount">250.00</td>
-                    <td data-label="Status">completed</td>
-                </tr>
-                <tr>
-                    <td data-label="Date">10/2/25</td>
-                    <td data-label="Description">bayad sa paluwagan</td>
-                    <td data-label="Amount">250.00</td>
-                    <td data-label="Status">completed</td>
-                </tr>
-                <tr>
-                    <td data-label="Date">10/2/25</td>
-                    <td data-label="Description">bayad sa paluwagan</td>
-                    <td data-label="Amount">250.00</td>
-                    <td data-label="Status">completed</td>
-                </tr>
-                <tr>
-                    <td data-label="Date">10/2/25</td>
-                    <td data-label="Description">bayad sa paluwagan</td>
-                    <td data-label="Amount">250.00</td>
-                    <td data-label="Status">completed</td>
-                </tr>
-                <tr>
-                    <td data-label="Date">10/2/25</td>
-                    <td data-label="Description">bayad sa paluwagan</td>
-                    <td data-label="Amount">250.00</td>
-                    <td data-label="Status">completed</td>
-                </tr>
-                <tr>
-                    <td data-label="Date">10/2/25</td>
-                    <td data-label="Description">bayad sa paluwagan</td>
-                    <td data-label="Amount">250.00</td>
-                    <td data-label="Status">completed</td>
-                </tr>
-            </tbody>
+     <tbody>
+    <?php foreach ($data as $row): ?>
+        <tr>
+            <td data-label="Date"><?php echo htmlspecialchars($row['created_at']); ?></td>
+            <td data-label="Description"><?php echo htmlspecialchars($row['description']); ?></td>
+            <td data-label="Amount"><?php echo htmlspecialchars($row['amount']); ?></td>
+            <td data-label="Status"><?php echo htmlspecialchars($row['status']); ?></td>
+        </tr>
+    <?php endforeach; ?>
+</tbody>
+
         </table>
        </div>
     </div>

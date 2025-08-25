@@ -1,3 +1,8 @@
+<?php
+    require_once "../includes/init.php";
+    require_once "../includes/fetch_user_cred.php"
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,7 +32,7 @@
                         <img class="icon" src="../images/verified_icon.png" alt="Verified"> 
                         <h1 class="txt">Verified Account</h1>
                     </div>
-                    <h2 class="subtxt"> Date verified 10/11/2023</h2>
+                    <h2 class="subtxt"> Date verified <?php echo $info["created_at"]?></h2>
                 </div>
 
                <div class="links">
@@ -52,37 +57,37 @@
                 <div class="info_box">
                     <div class="card_info">
                         <h1>Full Name</h1>
-                        <h2>Sameple Name</h2>
+                        <h2><?php echo $info["fullname"]?></h2>
                     </div>
 
                     <div class="card_info">
                         <h1>Phone Number</h1>
-                        <h2>Sameple Number</h2>
+                        <h2><?php echo $info["Phone_number"]?></h2>
                     </div>
 
                     <div class="card_info">
                         <h1>Address</h1>
-                        <h2>Sameple address</h2>
+                        <h2> <?php echo $info["address"]?></h2>
                     </div>
 
                     <div class="card_info">
                         <h1>Country</h1>
-                        <h2>Sameple Country</h2>
+                        <h2>PH</h2>
                     </div>
 
                     <div class="card_info">
                         <h1>Email Address</h1>
-                        <h2>Sameple Email Address</h2>
+                        <h2><?php echo $info_email["username"]?></h2>
                     </div>
 
                     <div class="card_info">
                         <h1>Date Created Account</h1>
-                        <h2>Sameple Name</h2>
+                        <h2><?php echo $info["created_at"]?></h2>
                     </div>
 
                     <div class="card_info">
                         <h1>Language</h1>
-                        <h2>Sameple Name</h2>
+                        <h2>ENGLISH </h2>
                     </div>
 
                     <div class="card_info">
