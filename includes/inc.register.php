@@ -17,7 +17,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         // insert data using non-name method 
         $query = "INSERT INTO users (username, pwd) VALUES (?, ?);";
         $query2 = "INSERT INTO credentials (fullname, Phone_number, user_id) VALUES (?, ?, ?);";
-        $query3 = "INSERT INTO balance (balance, user_id) VALUES (?, ?);";
+        $query3 = "INSERT INTO balance (user_balance, user_id) VALUES (?, ?);";
 
 
         $stmt = $pdo->prepare($query);
